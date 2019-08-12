@@ -1,0 +1,10 @@
+countmanager({
+	"countmanager":[{
+		"item":"修改密码",
+		"a":"./changesecret1.html"
+	},
+	{
+		"item":"修改账户信息",
+		"a":"./changemyinfo.html"
+	}]
+})

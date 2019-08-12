@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 引入模板 -->
+    <!-- link -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../font/iconfont.css" rel="stylesheet">
+    <!-- link结束 -->
+
+    <!-- 自引css -->
+    <link rel="stylesheet" href="../css/vip.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <!-- 自引css结束 -->
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入模板结束 -->
+
+    
+
+    <title>VIP</title>
+</head>
+<body>
+
+
+    <!-- 面板头 -->
+    <div class="panel container panel-head clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><!-- <i class="iconfont pull-left">&#xe639;</i> -->VIP</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头 -->
+    <!-- 面板头 -->
+    <div class="panel container clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><i class="iconfont">&#xe639;</i>首页</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头结束 -->
+    
+
+    <!-- 首页信息框 -->
+    <div class="row userpanal vippanal">
+        <div class="col-xs-4 avatar">
+            <img src="../assets/登陆.png" alt="" class="img-circle">
+        </div>
+        <h3 class="row username" id="username">你是个逗比&nbsp;<i class="iconfont vipicon">&#xe603;</i>
+        </h3>
+        <div class="row userid" id="userid">我的id：1564313548</div>
+        <div class="row level">
+            <div class="cheflevel" id="cheflevel">
+                厨艺值:1246
+            </div>
+            <div class="viplevel" id="viplevel">
+                VIP:545
+            </div>
+        </div>
+        <!-- 设置和登陆 -->
+        <div class="row manager">
+            <a class="zhanghaoguanli"><i class="iconfont zhanghaoguanli">&#xeb8d;</i>账号管理</a>
+        </div>
+        <div id="logindoor" class="row logindoor">
+            <a class="denglu">登陆</a>
+        </div>
+        <!-- 设置和登录结束 -->
+    </div>
+    <!-- 首页信息框结束 -->
+    
+    <!-- 消除浮动 -->
+    <!-- 首页信息框 -->
+    <div class="row userpanalclear">
+        <div class="col-xs-4 avatar">
+            <img src="../assets/登陆.png" alt="" class="img-circle">
+        </div>
+
+        <h3 class="row username" id="username">你是个逗比</h3>
+        <div class="row userid" id="userid">我的id：1564313548</div>
+        <div class="row level">
+            <div class="cheflevel" id="cheflevel">
+                厨艺值:1246
+            </div>
+            <div class="viplevel" id="viplevel">
+                VIP:545
+            </div>
+        </div>
+        <!-- 设置和登陆 -->
+        <div class="row manager">
+                <i>@</i><a href="">账号管理</a>
+        </div>
+        <div id="logindoor" class="row logindoor">
+            <a href="">登陆</a>
+        </div>
+        <!-- 设置和登录结束 -->
+    </div>
+    <!-- 首页信息框结束 -->
+    <!-- 消除浮动结束 -->
+
+
+
+    
+    <!-- 中间部分 -->
+    <div class="panel panel-info container panel-allbody">
+            <!-- 面板体 -->
+            <div class="panel-body row">
+                <!-- 我的权益和会员积分 -->
+                <ul class="nav nav-pills nav-justified quan-ji">
+                    <li><a href="#">我的权益</a></li>
+                    <li><a href="#duihuanhaoli">兑换好礼</a></li>
+                </ul>
+                <!-- 我的权益和会员积分结束 -->
+                <!-- 清楚浮动 -->
+                <!-- 我的权益和会员积分 -->
+                <ul class="nav nav-pills nav-justified quan-jiclear">
+                    <li><a href="#">我的权益</a></li>
+                    <li><a href="#">会员积分</a></li>
+                </ul>
+                <!-- 我的权益和会员积分结束 -->
+                <!-- 清楚浮动结 -->
+
+                <!-- 会员专享 -->
+                <h3 id="huiyuanzhuanxiang">会员专享</h3>
+                <div class="row viplist">
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单4.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单1.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单3.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单4.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <!-- 会员专享结束 -->
+                <!-- 兑换好礼 -->
+                <h3 id="duihuanhaoli">兑换好礼</h3>
+                <div class="row viplist">
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单4.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单1.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单3.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                        <a href="#" class="thumbnail">
+                            <img src="../assets/我的订单4.png"
+                                 alt="通用的占位符缩略图" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <!-- 兑换好礼结束 -->
+
+
+
+            </div>
+            <!-- 面板体结束 -->
+    </div>
+    <!-- 中间部分结束 -->
+    <!-- 导航条开始 -->
+    <nav id="mynavbuttom" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a v-bind:href="routers.index"><i class="iconfont">&#xeb8f;</i>首页</a></li>
+                <li><a v-bind:href="routers.buycar"><i class="iconfont">&#xe60e;</i>购物车</a></li>
+                <li><a v-bind:href="routers.vip"><i class="iconfont">&#xe61c;</i>VIP</a></li>
+                <li><a v-bind:href="routers.home"><i class="iconfont">&#xeb8a;</i>我的</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 导航条结束 -->
+</body>
+
+<!-- js开始 -->
+<script>
+    // 导航栏统一配置
+    var vm = new Vue({
+        el: '#mynavbuttom',
+        data: {
+            routers:{
+                index:"",
+                buycar:"",
+                vip:"",
+                home:""
+            }
+        },
+        methods: {
+            details: function() {
+                return  this.site + " - 学的不仅是技术，更是梦想！";
+            }
+        },
+        created:function(){
+            $.ajax({
+                url:"../jsonp/configuration.js",
+                type:"GET",
+                dataType: 'jsonp', 
+                jsonpCallback:"jsoncg", 
+                crossDomain: true
+            }).done((e)=>{
+                console.log(e);
+                this.routers.index = e.routers.index;
+                this.routers.buycar = e.routers.buycar;
+                this.routers.vip = e.routers.vip;
+                this.routers.home = e.routers.home;
+                routers = e.routers;
+                console.log(this.routers);
+            });
+        }  
+    })
+    // 导航栏统一配置结束
+    var routers = {}
+    window.onload=function(){
+        console.log(routers);
+        $(".zhanghaoguanli").click(function(){
+            window.location.href=routers.countmanager;
+        })
+        $(".denglu").click(function(){
+            window.location.href=routers.login;
+        })
+    }
+</script>
+<!-- js结束 -->
+</html>

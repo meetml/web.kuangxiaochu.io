@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 引入模板 -->
+	<!-- link -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+     <link href="../font/iconfont.css" rel="stylesheet">
+	<!-- link结束 -->
+
+	<!-- 自引css -->
+	<link rel="stylesheet" href="../css/buycar.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<!-- 自引css结束 -->
+
+	<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<!-- 引入模板结束 -->
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+
+	<title>购物车</title>
+</head>
+<body>
+	
+	<!-- 面板头 -->
+    <div class="panel container panel-head clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><!-- <i class="iconfont pull-left">&#xe639;</i> -->购物车</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头 -->
+    <!-- 面板头 -->
+    <div class="panel container clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><i class="iconfont">&#xe639;</i>首页</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头结束 -->
+
+	
+	<!-- 中间部分 -->
+	<div class="panel panel-info container panel-allbody">
+			<!-- 面板体 -->
+		    <div class="panel-body row">
+		    	<!-- 购物车列表部分开始 -->
+				    <div id="buycarlist">
+				         <div v-for="good in buycarlist" class="buycarlistall">
+				         	<div class="col-xs-3 col-md-4 col-sm-4 col-md-4">
+				         		<img v-bind:src="good.img" alt="通用的占位符缩略图">
+				         	</div>
+				         	<!-- <div class="clearfix visible-xs"></div> -->
+				         	<div class="col-xs-6 col-md-4 col-sm-4 col-md-4 price">
+				         		{{good.description}}
+				         	</div>	
+				         	<!-- <div class="clearfix visible-xs"></div>			           -->
+				            <div class="caption col-xs-3 col-md-4 col-sm-4 col-md-4">
+				                <h3>{{good.goodname}}</h3>
+				                <p>￥{{good.price}}</p>
+				                <p>
+				                    <a class="btn btn-primary countbtn" role="button" v-on:click="good.count--;jisuan()">-
+				                    </a> 
+				                    <input type="text" v-model:value="good.count" class="showshuru" @keyup.enter="jisuan()">
+				                    <a class="btn btn-default countbtn" role="button" v-on:click="good.count++;jisuan()">+
+				                    </a>
+				                </p>
+				            </div>
+				            <div class="clearfix visible-xs"></div>
+				         </div>
+				    </div>				    				    		
+				<!-- 购物车列表部分结束 -->
+		    </div>
+		    <!-- 面板体结束 -->
+	</div>
+	<!-- 中间部分结束 -->
+
+	<!-- 购物部分 开始-->
+	<div class="pay row">
+		<div class="col-xs-8">
+			<div id="shangpingjianshu">商品：0件</div>
+			<div id="shangpingzongjia">总价：0元</div>
+		</div>
+		<div class="col-xs-4">
+			<a href="" class="btn">
+                购物车
+            </a>			
+		</div>
+	</div>
+	<!-- 购物部分 结束 -->
+
+	<!-- 导航条开始 -->
+	<nav id="mynavbuttom" class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+	        <ul class="nav navbar-nav">
+	            <li><a v-bind:href="routers.index"><i class="iconfont">&#xeb8f;</i>首页</a></li>
+	            <li><a v-bind:href="routers.buycar"><i class="iconfont">&#xe60e;</i>购物车</a></li>
+	            <li><a v-bind:href="routers.vip"><i class="iconfont">&#xe61c;</i>VIP</a></li>
+	            <li><a v-bind:href="routers.home"><i class="iconfont">&#xeb8a;</i>我的</a></li>
+	        </ul>
+	    </div>
+	</nav>
+	<!-- 导航条结束 -->
+</body>
+
+<!-- js开始 -->
+<script>
+	// 全页面统一配置
+	var vm = new Vue({
+        el: '#mynavbuttom',
+        data: {
+            routers:{
+            	index:"",
+            	buycar:"",
+            	vip:"",
+            	home:""
+            }
+        },
+        methods: {         
+        },
+        created:function(){
+        	$.ajax({
+        		url:"../jsonp/configuration.js",
+        		type:"GET",
+        		dataType: 'jsonp', 
+        		jsonpCallback:"jsoncg", 
+        		crossDomain: true
+        	}).done((e)=>{
+        		console.log(e);
+        		this.routers.index = e.routers.index;
+        		this.routers.buycar = e.routers.buycar;
+        		this.routers.vip = e.routers.vip;
+        		this.routers.home = e.routers.home;
+        		console.log(this.routers);
+        	});
+        }  
+    })
+    // 导航栏统一配置结束
+
+    // 导购物车信息
+	var buycar = new Vue({
+        el: '#buycarlist',
+        data: {
+			buycarlist:[],
+			shangpingjianshu:0,
+			shangpingzongjia:0
+        },
+        methods: {
+        	jisuan:function(){
+        		for (var i = 0; i < this.buycarlist.length; i++) {
+        			if(this.buycarlist[i].count < 0){
+        				this.buycarlist[i].count = 0;
+        			}
+        		}
+        		this.shangpingjianshu = 0;
+        		this.shangpingzongjia = 0;
+        		for (var i = 0; i < this.buycarlist.length; i++) {
+        			this.shangpingjianshu += parseInt(this.buycarlist[i].count);
+        			// console.log(this.buycarlist[i].count);
+        			this.shangpingzongjia += this.buycarlist[i].count*this.buycarlist[i].price;
+        		}
+        		// console.log(this.shangpingjianshu);
+        		// console.log(this.shangpingzongjia);
+        		$("#shangpingzongjia").text("总价："+this.shangpingzongjia+"元");
+        		$("#shangpingjianshu").text("总计："+this.shangpingjianshu+"件");
+        	}
+
+        },
+        created:function(){
+        	$.ajax({
+        		url:"../jsonp/buycarlist.js",
+        		type:"GET",
+        		dataType: 'jsonp', 
+        		jsonpCallback:"buycarlist", 
+        		crossDomain: true
+        	}).done((e)=>{
+        		console.log(e);
+        		this.buycarlist = e.buycarlist;
+        		console.log(this.buycarlist);
+        	});
+        }  
+    })
+    // 导购物车信息结束
+</script>
+<!-- js结束 -->
+</html>
+

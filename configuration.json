@@ -1,0 +1,8 @@
+{
+	"routers":{
+		"index":"./html/index.html",
+		"buycar":"./html/buycar.html",
+		"vip":"./html/vip.html",
+		"home":"./html/home.html"
+	}
+}

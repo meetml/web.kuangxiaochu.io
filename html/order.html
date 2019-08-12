@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- 自引css -->
+	<link rel="stylesheet" href="../css/all.css">
+	<!-- 自引结束 -->
+
+
+	<!-- 引入模板 -->
+	<!-- link -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+     <link href="../font/iconfont.css" rel="stylesheet">
+	<!-- link结束 -->
+
+	<!-- 自引css -->
+	<link rel="stylesheet" href="../css/order.css">
+	<link rel="stylesheet" href="../css/all.css">
+	<!-- 自引css结束 -->
+
+	<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<!-- 引入模板结束 -->
+	<title>我的订单</title>
+</head>
+<body>
+	<!-- 面板头 -->
+    <div class="panel container panel-head clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><i class="iconfont pull-left fanhuishangyiye">&#xe639;</i>我的订单</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头 -->
+    <!-- 面板头 -->
+    <div class="panel container clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><i class="iconfont">&#xe639;</i>首页</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头结束 -->
+
+
+
+
+    <!-- 中间部分 -->
+	<div class="panel panel-info container panel-allbody">
+			<!-- 面板体 -->
+		    <div class="panel-body row">
+                
+                <!-- 中间选择框 -->
+                <div class="note-col-order-clear">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav text-center">
+                                <li>
+                                    <a href="#allorder" class="wodeshoucang" data-toggle="tab">
+                                    <i class="iconfont chooseicon">&#xec18;</i>
+                                    全部订单
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#waitorder" class="yonghubiji" data-toggle="tab">
+                                    <i class="iconfont chooseicon">&#xe61e;</i>
+                                    待评价
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#returnorder" class="wodedingdan" data-toggle="tab">
+                                    <i class="iconfont chooseicon">&#xe609;</i>
+                                    退款
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#payorder" class="wodedingdan" data-toggle="tab">
+                                    <i class="iconfont chooseicon">&#xe609;</i>
+                                    付款
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>           
+                </div>
+                <!-- 中间选择框结束 -->
+
+                <!-- 经常购买 -->
+                <div>经常购买</div>
+                <div class="alwaysbuy">                
+                    <div>
+                        <div><img src="../assets/我的订单2.png" alt=""><br>我的订单</div>
+                        <div><img src="../assets/我的订单2.png" alt=""><br>我的订单</div>
+                        <div><img src="../assets/我的订单2.png" alt=""><br>我的订单</div>
+                        <div><img src="../assets/我的订单2.png" alt=""><br>我的订单</div>
+                        <div><img src="../assets/我的订单2.png" alt=""><br>我的订单</div>
+                        <div><img src="../assets/我的订单2.png" alt=""><br>我的订单</div>
+                    </div>            
+                </div>
+                <!-- 经常购买结束 -->
+                <div id="myTabContent" class="tab-content">
+                    <div class="orderlist tab-pane fade in active" id="allorder">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+                    <div class="orderlist tab-pane fade" id="waitorder">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="orderlist tab-pane fade" id="returnorder">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="orderlist tab-pane fade" id="payorder">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 listitem">
+                            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
+                                <img src="../assets/我的订单2.png" alt="">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10 text">
+                                <div class="row">西蓝花火锅套餐<span>&emsp;订单状态:已完成</span></div>
+                                <div class="row">
+                                    <a href="" class="btn">再来一单</a>
+                                    <a href="" class="btn">评价</a>
+                                    <span>价格:25</span>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+		    </div>
+		    <!-- 面板体结束 -->
+	</div>
+	<!-- 中间部分结束 -->
+
+
+
+
+    <!-- 导航条开始 -->
+	<nav id="mynavbuttom" class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+	        <ul class="nav navbar-nav">
+	            <li><a v-bind:href="routers.index"><i class="iconfont">&#xeb8f;</i>首页</a></li>
+	            <li><a v-bind:href="routers.buycar"><i class="iconfont">&#xe60e;</i>购物车</a></li>
+	            <li><a v-bind:href="routers.vip"><i class="iconfont">&#xe61c;</i>VIP</a></li>
+	            <li><a v-bind:href="routers.home"><i class="iconfont">&#xeb8a;</i>我的</a></li>
+	        </ul>
+	    </div>
+	</nav>
+	<!-- 导航条结束 -->
+
+
+
+
+
+
+
+
+	
+</body>
+
+<script>
+	// 全页面统一配置
+	var vm = new Vue({
+        el: '#mynavbuttom',
+        data: {
+            routers:{
+            	index:"",
+            	buycar:"",
+            	vip:"",
+            	home:""
+            }
+        },
+        methods: {         
+        },
+        created:function(){
+        	$.ajax({
+        		url:"../jsonp/configuration.js",
+        		type:"GET",
+        		dataType: 'jsonp', 
+        		jsonpCallback:"jsoncg", 
+        		crossDomain: true
+        	}).done((e)=>{
+        		console.log(e);
+        		this.routers.index = e.routers.index;
+        		this.routers.buycar = e.routers.buycar;
+        		this.routers.vip = e.routers.vip;
+        		this.routers.home = e.routers.home;
+                routers = e.routers;
+        		console.log(this.routers);
+        	});
+        }  
+    })
+    // 导航栏统一配置结束
+    var routers = {}
+    window.onload=function(){
+      $(".fanhuishangyiye").click(function(){
+        window.location.href=routers.home;
+      })        
+    }
+</script>
+</html>

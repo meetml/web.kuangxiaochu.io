@@ -1,0 +1,85 @@
+
+
+
+.panel-body{
+  margin-right: 0;
+  margin-left: 15px;
+}
+/*我的页导航栏*/
+ul.nav{
+  width: 80%;
+  margin: 7.5px 0;
+  left: 50%;
+  margin-left: -40%;
+}
+.nav li{
+  width: 33.3%;
+  float: left;
+  font-size: 10px;
+}
+.wodeshoucang,.yonghubiji,.wodedingdan{
+  color: #000 ! important;
+}
+.chooseicon{
+  display: block;
+  color: #000;
+  font-size: 25px;
+  font-weight: 900;
+}
+.note-col-order{
+  position: fixed;
+  top: 156px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+/*我的也导航栏结束*/
+
+
+/*动态*/
+li.dongtai{
+width: 50%;
+color: #bb9e9e;
+}
+.navbar{
+  margin-bottom: -6px;
+}
+.guding{
+  position: fixed;
+  top: 52px;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+  background: #fff;
+}
+.gudingclear{
+  position: relative;
+  top: -4px;
+}
+.sharelist{
+  border: solid 1px #e0c5c5;
+  margin: 10px 9px;
+  border-radius: 10px;
+}
+.sharelist i{
+  display: inline;
+  font-size: 22px;
+  color: #969292;
+  margin: 0 12px;
+}
+/*动态结束*/
+.tab-pane>div>div:last-child{
+	position: relative;
+	top: 15px;
+}
+.tab-pane>div{
+	position: relative;
+	top: 50%;
+	border: 1px solid #007373;
+	border-radius: 5px;
+	line-height: 100%;
+	font-size: 25px;
+	font-family: "隶书";
+	margin: 16px 0;
+	margin-right: 15px;
+}

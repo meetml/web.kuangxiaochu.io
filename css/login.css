@@ -1,0 +1,46 @@
+
+/*登陆框*/
+.loginform{
+vertical-align: center;
+margin:8% auto 8% ;
+width: 80%;
+}
+.loginform form{
+	background-color: #fbeefd;
+}
+.loginform>form>div:not(:first-child){
+	margin-top: 10%;
+}
+.loginform>form{
+	padding: 4% 6%;
+}
+/*登陆框结束*/
+
+
+/*头像*/
+.avatarBox{
+	margin: 0 0 ! important;
+	background-color: #ad6e6e;
+}
+.avatar{
+  background-color: #ff934d;
+  /*background-color: #ad6e6e;*/
+  text-align: center;
+  /*margin: 0 4.5%;*/
+  border-radius: 4px;
+  padding: 5% 0;
+  /*display: inline-block;*/
+  width: 100%;
+}
+/*头像结束*/
+
+
+/*响应式调整*/
+.ifshow{
+display: inline-block;
+width: 10%;
+}
+/*响应式调整结束*/
+
+
+

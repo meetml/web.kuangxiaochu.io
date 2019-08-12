@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- 自引css -->
+  <link rel="stylesheet" href="../css/all.css">
+  <!-- 自引结束 -->
+
+
+  <!-- 引入模板 -->
+  <!-- link -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+     <link href="../font/iconfont.css" rel="stylesheet">
+  <!-- link结束 -->
+
+  <!-- 自引css -->
+  <link rel="stylesheet" href="../css/countmanager.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <!-- 自引css结束 -->
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- 引入模板结束 -->
+
+  <title>账户管理</title>
+</head>
+<body>
+    <!-- 面板头 -->
+    <div class="panel container panel-head clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><i class="iconfont pull-left fanhuishangyiye">&#xe639;</i>账户管理</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头 -->
+    <!-- 面板头 -->
+    <div class="panel container clearBar">
+            <div class="panel-heading row">
+                <h3 class="panel-title text-center"><i class="iconfont">&#xe639;</i>首页</h3>
+                <div class="clearfloat"></div>
+            </div>
+    </div>
+    <!-- 面板头结束 -->
+    <!-- 清除浮动面板头结束 -->
+
+
+    <!-- 中间部分 -->
+    <div class="panel panel-info container panel-allbody">
+      <!-- 面板体 -->
+      <div id="list" class="panel-body row">
+        <div class="row list" v-for="item in countmanager" v-on:click="a(item.a)">
+            {{item.item}}    
+        </div>    
+      </div>
+      <!-- 面板体结束 -->
+    </div>
+    <!-- 中间部分结束 -->
+</body>
+<!-- js开始 -->
+<script>
+  // 导航栏统一配置
+  var vm = new Vue({
+        el: '#list',
+        data: {
+            routers:{},
+            countmanager:{}
+        },
+        methods: {
+            a:function(e){
+              window.location.href=e
+            }            
+        },
+        created:function(){
+          $.ajax({
+            url:"../jsonp/configuration.js",
+            type:"GET",
+            dataType: 'jsonp', 
+            jsonpCallback:"jsoncg", 
+            crossDomain: true
+          }).done((e)=>{
+            console.log(e);
+            this.routers = e.routers;
+            routers = e.routers;       
+            console.log(this.routers);
+          });
+          $.ajax({
+            url:"../jsonp/countmanager.js",
+            type:"GET",
+            dataType: 'jsonp', 
+            jsonpCallback:"countmanager", 
+            crossDomain: true
+          }).done((e)=>{
+            console.log(e);
+            this.countmanager = e.countmanager;        
+            console.log(this.routers);
+          });
+        }  
+    })
+    // 导航栏统一配置结束
+     var routers = {}
+    window.onload=function(){
+      console.log(routers);
+      $(".fanhuishangyiye").click(function(){
+        window.location.href=routers.home;
+      })  
+    }
+</script>
+<!-- js结束 -->
+</html>
