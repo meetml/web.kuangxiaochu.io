@@ -1,0 +1,22 @@
+jsoncg({
+	"routers":{
+		"index":"./index.html",
+		"buycar":"./buycar.html",
+		"vip":"./vip.html",
+		"home":"./home.html",
+		"note":"./note.html",
+		"register":"./register.html",
+		"login":"./login.html",
+		"goodlist":"./goodlist.html",
+		"gooddetail":"./gooddetail.html",
+		"order":"./order.html",
+		"changemyinfo":"./changemyinfo.html",
+		"changesecret1":"./changesecret1.html",
+		"changesecret2":"./changesecret2.html",
+		"changesecret3":"./changesecret3.html",
+		"collect":"./collect.html",
+		"cheflist":"./cheflist.html",
+		"countmanager":"./countmanager.html"
+		
+	}
+})

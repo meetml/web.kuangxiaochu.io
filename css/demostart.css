@@ -1,0 +1,73 @@
+
+/*标题*/
+.panel-title{
+  text-align: center;
+  font-family: "华文琥珀";
+}
+
+
+
+
+ /*导航栏*/
+#mynavbuttom{
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    margin-bottom:0px;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items:stretch;
+}
+#mynavbuttom li{
+    float: left;
+    width:25%;
+    text-align:center;
+    flex:1 1 auto;
+}
+#mynavbuttom div{
+    width: 100%;
+    flex:1 1 auto;
+}
+#mynavbuttom ul{
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    flex:1 1 auto;
+
+} 
+
+
+
+
+
+  /*导航栏*/
+#mynavbuttom{
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    margin-bottom:0px;
+    display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  align-items:stretch;
+}
+#mynavbuttom li{
+    float: left;
+    width:25%;
+    text-align:center;
+    flex:1 1 auto;
+}
+#mynavbuttom div{
+  width: 100%;
+    flex:1 1 auto;
+}
+#mynavbuttom ul{
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  flex:1 1 auto;
+
+}

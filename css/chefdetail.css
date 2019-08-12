@@ -1,0 +1,112 @@
+
+/*************************************代码index第一个代码中的CSS样式*******************************************/
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+#kxc_sou{
+	padding-top: 18px;
+
+}
+/******************************头部样式********************************/
+#kxc_header{
+ background: -webkit-linear-gradient(top,#FBF35E,#D07208);
+
+}
+
+#kxc_header {
+    height:60px;
+    line-height: 59px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#kxc_header .top-bar .container .row>div+div{
+    border-left: 1px solid #e0e0e0;
+}
+
+#lk_header .top-bar .container .row .top-bar-1 .top-bar-1-o:hover{
+    background-color: transparent;
+    
+}
+
+/*******************************主体样式**********************************/
+#kxc_list{
+	padding: 80px 0;
+	
+}
+#kxc_list .one{
+	background-color: #f0f0f0;
+	margin-left: auto;
+}
+#kxc_list .one ul{
+    list-style: none;
+}
+#kxc_list .one li{
+	padding: 30px 0;
+}
+
+#kxc_list .two{
+	padding-top: 2%;
+}
+
+
+
+
+
+/***********************************************代码界面二css样式***************************************************************/
+#kxc_details{
+	padding: 10% 10% ;
+	 background-color: transparent;
+}
+
+/***************************厨师特色*****************************/
+#lk_product{
+    background-color: #f0f0f0;
+    padding: 30px 0;
+}
+
+#lk_product .nav{
+   font-size: 18px;
+}
+
+#lk_product .nav a{
+    color: #999;
+}
+
+#lk_product .nav li.active a{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+    color: #000;
+}
+
+#lk_product .tab-content{
+    padding-top: 20px;
+}
+
+#lk_product .pd-left{
+    padding: 20px 0;
+}
+
+#pd_one_1{
+    margin: 15px 0;
+}
+
+#pd_one_2{
+    background-color: transparent;
+}
+
+#pd_one_4{
+    margin: 15px 0;
+}
+#lk_product #pd_two_1{
+    padding: 20px ;
+    text-align: center;
+}
+
+#lk_product #pd_two_1 h1{
+    margin-bottom: 15px;
+}
+
+/************************** 评论界面 ***************************/
